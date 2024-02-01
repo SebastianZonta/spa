@@ -1,0 +1,18 @@
+<h1>{{hero.name | uppercase }} <small>({{hero.premiere | date:'y'}})</small></h1>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="hero.image" class="img-fluid" [alt]="hero.name">
+        <div class="d-grid gap-2">
+            <a type="button" [routerLink]="['/heroes']" class="btn btn-outline-danger">Go back</a>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{hero.name}}</h3>
+        <p>{{hero.bio}}</p>
+        <div>
+            <!-- <img [src]= "hero.house === 'DC' ? 'assets/images/DC.png' : 'assets/images/Marvel.png' " alt=""> -->
+            <img src= "assets/images/{{hero.house}}.png" [alt]="hero.house" style="width: 120px">
+        </div>
+    </div>
+</div>

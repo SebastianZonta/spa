@@ -1,0 +1,14 @@
+<div class="col">
+    <div class="card h-100 animnated fadeIn fast">
+      <img [src]="hero.image" class="card-img-top" [alt]="hero.name">
+      <div class="card-body">
+        <h5 class="card-title">{{hero.name}}</h5>
+        <p class="card-text">{{hero.bio}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">{{hero.premiere}}</small>
+      </div>
+      <!-- <button [routerLink]="['/heroe', $index]" class="btn btn-outline-info">See more...</button> -->
+      <button (click)="seeHeroe()" class="btn btn-outline-info">See more...</button>
+    </div>
+  </div>

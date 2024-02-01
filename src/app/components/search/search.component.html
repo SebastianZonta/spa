@@ -1,0 +1,14 @@
+<h1>Searching: <small>{{pattern}}</small></h1>
+
+@if (heroes.length === 0) {
+<div class="alert alert-danger" role="alert">
+    Woops! There is no hero for that name. Try with another name or go back to the <a href="#" [routerLink]="['/heroes']" class="alert-link">heroes list</a>
+</div>
+}
+@else{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for (hero of heroes; track $index){
+            <app-hero-card [hero]="hero"></app-hero-card>
+        }
+    </div>
+}
